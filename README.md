@@ -84,7 +84,7 @@ void ResumeButton_Clicked()
 }
 ```
 ***
-If you want to stop or cancel a recurring operation, you can call CancelRecurring(). This will dispose the underlying timer object.
+If you want to stop or cancel a recurring operation, you can call CancelRecurring(). This will dispose the underlying timer object associated with the RecurringOperation object.
 ```C#
 void CancelButton_Clicked()
 {
