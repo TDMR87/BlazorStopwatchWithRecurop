@@ -1,5 +1,5 @@
 # Blazor stopwatch component
-A stopwatch/timer component created with Blazor and Recurop library (for .NET Timer based functions).
+A stopwatch/timer component created with Blazor and Recurop library.
 
 See the live demo at https://tdmr87.github.io/BlazorStopwatchWithRecurop/
 
