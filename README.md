@@ -9,7 +9,7 @@ Check out the Recurop library: https://github.com/TDMR87/Recurop
 
 ***
 
-All the .NET System.Threading.Timer based functionality is achieved by using the Recurop .NET Standard library (available on NuGet). Recurop abstracts the functions that are executed by a Timer into an object through which the execution can be easily controlled (paused, resumed etc). Recurop also handles the thread safety of the actions, enables assigning handlerss to exceptions thrown by the actions, and offers bindable properties that expose the current state of the action (executing, paused, idle, cancelled etc.)
+All of the .NET System.Threading.Timer based functionality is achieved by using the Recurop .NET Standard library (available on NuGet). Recurop abstracts the functions that are executed by the Timer into an object through which the execution can be easily controlled (paused, resumed etc). Recurop also handles the thread safety of the actions, enables assigning handlerss to exceptions thrown by the actions, and offers bindable properties that expose the current state of the action (executing, paused, idle, cancelled etc.)
 
 ***
 
