@@ -13,7 +13,7 @@ All of the .NET System.Threading.Timer based functionality is achieved by using 
 
 ***
 
-Register Recurop in the DI container.
+Register Recurop in the DI container by calling **AddRecurop()**.
 
 ```C#
 using Recurop;
