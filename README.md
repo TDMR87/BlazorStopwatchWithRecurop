@@ -39,7 +39,7 @@ Inject Recurop's manager class inside a Blazor component.
 @inject RecurringOperationsManager Recurop
 ```
 ***
-Declare and instantiate a RecurringOperation object, which represents the timed function and it's state. You can assign the object the action to execute and event handlers for status changes and possible exceptions. In the code below, the function "IncrementTimer" is assigned as the action to execute.
+Declare and instantiate a RecurringOperation object, which represents the timed action and it's state. The constructor's name parameter is optional, but handy for identifying operations if there are many recurring operations running. You can assign the action to execute and event handlers for status changes and possible exceptions. In the code below, the function "IncrementTimer" is assigned as the action to execute. A handler for exceptions is also assigned by assigning a handler to the OperationFaulted event.
 ```C#
 @code {
     RecurringOperation _timerOperation;
@@ -48,8 +48,14 @@ Declare and instantiate a RecurringOperation object, which represents the timed 
     {
         _timerOperation = new("timer");
         _timerOperation.Operation = IncrementTimer;
-        _timerOperation.StatusChanged += TimerOperationStatusChanged;
         _timerOperation.OperationFaulted += LogError;
+    }
+    
+    // If there's an exception thrown inside the specified action (IncrementTimer) 
+    // then Recurop will execute this event handler.
+    void LogError(Exception ex)
+    {
+        Console.WriteLine(ex.Message);
     }
 }
 ```
